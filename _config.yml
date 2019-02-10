@@ -21,7 +21,7 @@ author: Berkeley DSEP
 email: ""
 description: ""
 
-baseurl: "/dsf" # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
+baseurl: "" # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
 url: "https://olebo.github.io/dsf" # the base hostname & protocol for your site, e.g. http://example.com
 
 
