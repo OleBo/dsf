@@ -8,10 +8,10 @@
   <title>Introduction</title>
   <meta name="description" content="Computational and Inferential Thinking">
 
-  <link rel="canonical" href="https://www.inferentialthinking.com/chapters/intro.html">
-  <link rel="alternate" type="application/rss+xml" title="" href="https://www.inferentialthinking.com/feed.xml">
+  <link rel="canonical" href="https://olebo.github.io/dsf/chapters/intro.html">
+  <link rel="alternate" type="application/rss+xml" title="" href="https://olebo.github.io/dsf/feed.xml">
 
-  <meta property="og:url"         content="https://www.inferentialthinking.com/chapters/intro.html" />
+  <meta property="og:url"         content="https://olebo.github.io/dsf/chapters/intro.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Introduction" />
 <meta property="og:description" content="Computational and Inferential Thinking" />
@@ -23,13 +23,13 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "https://www.inferentialthinking.com/chapters/intro.html",
+    "https://olebo.github.io/dsf/chapters/intro.html",
   "headline":
     "Introduction",
   "datePublished":
-    "2019-02-10T18:10:31+01:00",
+    "2019-02-10T19:20:55+01:00",
   "dateModified":
-    "2019-02-10T18:10:31+01:00",
+    "2019-02-10T19:20:55+01:00",
   "description":
     "Computational and Inferential Thinking",
   "author": {
@@ -41,21 +41,21 @@
     "name": "Data 100 at UC Berkeley",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.inferentialthinking.com",
+      "url": "https://olebo.github.io/dsf",
       "width": 60,
       "height": 60
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "https://www.inferentialthinking.com",
+    "url": "https://olebo.github.io/dsf",
     "height": 60,
     "width": 60
   }
 }
 
   </script>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/dsf/assets/css/styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -74,7 +74,7 @@
   <meta name="theme-color" content="#233947">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/dsf/favicon.png">
 
   <!-- MathJax Config -->
   <!-- Allow inline math using $ and automatically break long math lines -->
@@ -118,12 +118,12 @@ initFunction = function(myfunc) {
 
   <!-- Define some javascript variables that will be useful in other javascript -->
   <script>
-    const site_basename = '';
+    const site_basename = '/dsf';
   </script>
 
   <!-- Include Turbolinks to make page loads fast -->
   <!-- https://github.com/turbolinks/turbolinks -->
-  <script src="/assets/js/turbolinks.js" async></script>
+  <script src="/dsf/assets/js/turbolinks.js" async></script>
   <meta name="turbolinks-cache-control" content="no-cache">
 
   <!-- Load nbinteract for widgets -->
@@ -134,7 +134,7 @@ initFunction = function(myfunc) {
 
 
   <!-- Google analytics -->
-  <script src="/assets/js/ga.js" async></script>
+  <script src="/dsf/assets/js/ga.js" async></script>
 
   <!-- Clipboard copy button -->
   <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" async></script>
@@ -148,7 +148,7 @@ const codeCellId = index => `codecell${index}`
 
 const clipboardButton = id =>
   `<a class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
-    <img src="/assets/images/copy-button.svg" alt="Copy to clipboard">
+    <img src="/dsf/assets/images/copy-button.svg" alt="Copy to clipboard">
   </a>`
 
 // Clears selected text since ClipboardJS will select the text when copying
@@ -287,11 +287,11 @@ initFunction(initHiddenCells);
 
 
   <!-- Load custom website scripts -->
-  <script src="/assets/js/scripts.js" async></script>
+  <script src="/dsf/assets/js/scripts.js" async></script>
 
   <!-- Load custom user CSS and JS  -->
-  <script src="/assets/custom/custom.js" async></script>
-  <link rel="stylesheet" href="/assets/custom/custom.css">
+  <script src="/dsf/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/dsf/assets/custom/custom.css">
 
   <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
   
@@ -355,7 +355,7 @@ function addParamToInternalLinks(hub) {
   var links = document.querySelectorAll("a").forEach(function(link) {
     var href = link.href;
     // If the link is an internal link...
-    if (href.search("https://www.inferentialthinking.com") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
+    if (href.search("https://olebo.github.io") !== -1 || href.startsWith('/') || href.search("127.0.0.1:") !== -1) {
       // Assume we're an internal link, add the hub param to it
       var params = getJsonFromUrl(href);
       if (params !== false) {
@@ -446,7 +446,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
 
 <nav id="js-sidebar" class="c-textbook__sidebar">
-  <img src="/favicon.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/>
+  <img src="/dsf/favicon.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/>
   <h2 class="c-sidebar__title"></h2>
   <ul class="c-sidebar__chapters">
     
@@ -458,7 +458,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry c-sidebar__entry--active"
-          href="/chapters/intro"
+          href="/dsf/chapters/intro"
         >
           
           Introduction
@@ -481,7 +481,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/01/what-is-data-science"
+          href="/dsf/chapters/01/what-is-data-science"
         >
           
             1.
@@ -505,7 +505,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/01/1/intro"
+                  href="/dsf/chapters/01/1/intro"
                 >
                   
                     1.1
@@ -520,7 +520,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
     
                   <li class="c-sidebar__subsection">
                     <a class="c-sidebar__entry "
-                      href="/chapters/01/1/1/computational-tools"
+                      href="/dsf/chapters/01/1/1/computational-tools"
                     >
                       
                         1.1.1
@@ -534,7 +534,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
     
                   <li class="c-sidebar__subsection">
                     <a class="c-sidebar__entry "
-                      href="/chapters/01/1/2/statistical-techniques"
+                      href="/dsf/chapters/01/1/2/statistical-techniques"
                     >
                       
                         1.1.2
@@ -552,7 +552,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/01/2/why-data-science"
+                  href="/dsf/chapters/01/2/why-data-science"
                 >
                   
                     1.2
@@ -571,7 +571,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/01/3/Plotting_the_Classics"
+                  href="/dsf/chapters/01/3/Plotting_the_Classics"
                 >
                   
                     1.3
@@ -586,7 +586,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
     
                   <li class="c-sidebar__subsection">
                     <a class="c-sidebar__entry "
-                      href="/chapters/01/3/1/Literary_Characters"
+                      href="/dsf/chapters/01/3/1/Literary_Characters"
                     >
                       
                         1.3.1
@@ -600,7 +600,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
     
                   <li class="c-sidebar__subsection">
                     <a class="c-sidebar__entry "
-                      href="/chapters/01/3/2/Another_Kind_Of_Character"
+                      href="/dsf/chapters/01/3/2/Another_Kind_Of_Character"
                     >
                       
                         1.3.2
@@ -627,7 +627,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/02/causality-and-experiments"
+          href="/dsf/chapters/02/causality-and-experiments"
         >
           
             2.
@@ -651,7 +651,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/02/1/observation-and-visualization-john-snow-and-the-broad-street-pump"
+                  href="/dsf/chapters/02/1/observation-and-visualization-john-snow-and-the-broad-street-pump"
                 >
                   
                     2.1
@@ -670,7 +670,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/02/2/snow-s-grand-experiment"
+                  href="/dsf/chapters/02/2/snow-s-grand-experiment"
                 >
                   
                     2.2
@@ -689,7 +689,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/02/3/establishing-causality"
+                  href="/dsf/chapters/02/3/establishing-causality"
                 >
                   
                     2.3
@@ -708,7 +708,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/02/4/randomization"
+                  href="/dsf/chapters/02/4/randomization"
                 >
                   
                     2.4
@@ -727,7 +727,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/02/5/endnote"
+                  href="/dsf/chapters/02/5/endnote"
                 >
                   
                     2.5
@@ -755,7 +755,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/03/programming-in-python"
+          href="/dsf/chapters/03/programming-in-python"
         >
           
             3.
@@ -779,7 +779,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/03/1/Expressions"
+                  href="/dsf/chapters/03/1/Expressions"
                 >
                   
                     3.1
@@ -798,7 +798,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/03/2/Names"
+                  href="/dsf/chapters/03/2/Names"
                 >
                   
                     3.2
@@ -813,7 +813,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
     
                   <li class="c-sidebar__subsection">
                     <a class="c-sidebar__entry "
-                      href="/chapters/03/2/1/Growth"
+                      href="/dsf/chapters/03/2/1/Growth"
                     >
                       
                         3.2.1
@@ -831,7 +831,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/03/3/Calls"
+                  href="/dsf/chapters/03/3/Calls"
                 >
                   
                     3.3
@@ -850,7 +850,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/03/4/Introduction_to_Tables"
+                  href="/dsf/chapters/03/4/Introduction_to_Tables"
                 >
                   
                     3.4
@@ -878,7 +878,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/04/Data_Types"
+          href="/dsf/chapters/04/Data_Types"
         >
           
             4.
@@ -902,7 +902,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/04/1/Numbers"
+                  href="/dsf/chapters/04/1/Numbers"
                 >
                   
                     4.1
@@ -921,7 +921,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/04/2/Strings"
+                  href="/dsf/chapters/04/2/Strings"
                 >
                   
                     4.2
@@ -936,7 +936,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
     
                   <li class="c-sidebar__subsection">
                     <a class="c-sidebar__entry "
-                      href="/chapters/04/2/1/String_Methods"
+                      href="/dsf/chapters/04/2/1/String_Methods"
                     >
                       
                         4.2.1
@@ -954,7 +954,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/04/3/Comparison"
+                  href="/dsf/chapters/04/3/Comparison"
                 >
                   
                     4.3
@@ -982,7 +982,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/05/Sequences"
+          href="/dsf/chapters/05/Sequences"
         >
           
             5.
@@ -1006,7 +1006,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/05/1/Arrays"
+                  href="/dsf/chapters/05/1/Arrays"
                 >
                   
                     5.1
@@ -1025,7 +1025,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/05/2/Ranges"
+                  href="/dsf/chapters/05/2/Ranges"
                 >
                   
                     5.2
@@ -1044,7 +1044,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/05/3/More_on_Arrays"
+                  href="/dsf/chapters/05/3/More_on_Arrays"
                 >
                   
                     5.3
@@ -1072,7 +1072,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/06/Tables"
+          href="/dsf/chapters/06/Tables"
         >
           
             6.
@@ -1096,7 +1096,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/06/1/Sorting_Rows"
+                  href="/dsf/chapters/06/1/Sorting_Rows"
                 >
                   
                     6.1
@@ -1115,7 +1115,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/06/2/Selecting_Rows"
+                  href="/dsf/chapters/06/2/Selecting_Rows"
                 >
                   
                     6.2
@@ -1134,7 +1134,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/06/3/Example_Trends_in_the_Population_of_the_United_States"
+                  href="/dsf/chapters/06/3/Example_Trends_in_the_Population_of_the_United_States"
                 >
                   
                     6.3
@@ -1153,7 +1153,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/06/4/Example_Gender_Ratio_in_the_US_Population"
+                  href="/dsf/chapters/06/4/Example_Gender_Ratio_in_the_US_Population"
                 >
                   
                     6.4
@@ -1181,7 +1181,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/07/Visualization"
+          href="/dsf/chapters/07/Visualization"
         >
           
             7.
@@ -1205,7 +1205,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/07/1/Visualizing_Categorical_Distributions"
+                  href="/dsf/chapters/07/1/Visualizing_Categorical_Distributions"
                 >
                   
                     7.1
@@ -1224,7 +1224,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/07/2/Visualizing_Numerical_Distributions"
+                  href="/dsf/chapters/07/2/Visualizing_Numerical_Distributions"
                 >
                   
                     7.2
@@ -1243,7 +1243,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/07/3/Overlaid_Graphs"
+                  href="/dsf/chapters/07/3/Overlaid_Graphs"
                 >
                   
                     7.3
@@ -1271,7 +1271,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/08/Functions_and_Tables"
+          href="/dsf/chapters/08/Functions_and_Tables"
         >
           
             8.
@@ -1295,7 +1295,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/08/1/Applying_a_Function_to_a_Column"
+                  href="/dsf/chapters/08/1/Applying_a_Function_to_a_Column"
                 >
                   
                     8.1
@@ -1314,7 +1314,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/08/2/Classifying_by_One_Variable"
+                  href="/dsf/chapters/08/2/Classifying_by_One_Variable"
                 >
                   
                     8.2
@@ -1333,7 +1333,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/08/3/Cross-Classifying_by_More_than_One_Variable"
+                  href="/dsf/chapters/08/3/Cross-Classifying_by_More_than_One_Variable"
                 >
                   
                     8.3
@@ -1352,7 +1352,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/08/4/Joining_Tables_by_Columns"
+                  href="/dsf/chapters/08/4/Joining_Tables_by_Columns"
                 >
                   
                     8.4
@@ -1371,7 +1371,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/08/5/Bike_Sharing_in_the_Bay_Area"
+                  href="/dsf/chapters/08/5/Bike_Sharing_in_the_Bay_Area"
                 >
                   
                     8.5
@@ -1399,7 +1399,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/09/Randomness"
+          href="/dsf/chapters/09/Randomness"
         >
           
             9.
@@ -1423,7 +1423,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/09/1/Conditional_Statements"
+                  href="/dsf/chapters/09/1/Conditional_Statements"
                 >
                   
                     9.1
@@ -1442,7 +1442,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/09/2/Iteration"
+                  href="/dsf/chapters/09/2/Iteration"
                 >
                   
                     9.2
@@ -1461,7 +1461,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/09/3/Simulation"
+                  href="/dsf/chapters/09/3/Simulation"
                 >
                   
                     9.3
@@ -1480,7 +1480,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/09/4/Monty_Hall_Problem"
+                  href="/dsf/chapters/09/4/Monty_Hall_Problem"
                 >
                   
                     9.4
@@ -1499,7 +1499,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/09/5/Finding_Probabilities"
+                  href="/dsf/chapters/09/5/Finding_Probabilities"
                 >
                   
                     9.5
@@ -1527,7 +1527,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/10/Sampling_and_Empirical_Distributions"
+          href="/dsf/chapters/10/Sampling_and_Empirical_Distributions"
         >
           
             10.
@@ -1551,7 +1551,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/10/1/Empirical_Distributions"
+                  href="/dsf/chapters/10/1/Empirical_Distributions"
                 >
                   
                     10.1
@@ -1570,7 +1570,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/10/2/Sampling_from_a_Population"
+                  href="/dsf/chapters/10/2/Sampling_from_a_Population"
                 >
                   
                     10.2
@@ -1589,7 +1589,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/10/3/Empirical_Distribution_of_a_Statistic"
+                  href="/dsf/chapters/10/3/Empirical_Distribution_of_a_Statistic"
                 >
                   
                     10.3
@@ -1617,7 +1617,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/11/Testing_Hypotheses"
+          href="/dsf/chapters/11/Testing_Hypotheses"
         >
           
             11.
@@ -1641,7 +1641,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/11/1/Assessing_Models"
+                  href="/dsf/chapters/11/1/Assessing_Models"
                 >
                   
                     11.1
@@ -1660,7 +1660,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/11/2/Multiple_Categories"
+                  href="/dsf/chapters/11/2/Multiple_Categories"
                 >
                   
                     11.2
@@ -1679,7 +1679,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/11/3/Decisions_and_Uncertainty"
+                  href="/dsf/chapters/11/3/Decisions_and_Uncertainty"
                 >
                   
                     11.3
@@ -1707,7 +1707,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/12/Comparing_Two_Samples"
+          href="/dsf/chapters/12/Comparing_Two_Samples"
         >
           
             12.
@@ -1731,7 +1731,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/12/1/AB_Testing"
+                  href="/dsf/chapters/12/1/AB_Testing"
                 >
                   
                     12.1
@@ -1750,7 +1750,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/12/2/Deflategate"
+                  href="/dsf/chapters/12/2/Deflategate"
                 >
                   
                     12.2
@@ -1769,7 +1769,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/12/3/Causality"
+                  href="/dsf/chapters/12/3/Causality"
                 >
                   
                     12.3
@@ -1797,7 +1797,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/13/Estimation"
+          href="/dsf/chapters/13/Estimation"
         >
           
             13.
@@ -1821,7 +1821,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/13/1/Percentiles"
+                  href="/dsf/chapters/13/1/Percentiles"
                 >
                   
                     13.1
@@ -1840,7 +1840,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/13/2/Bootstrap"
+                  href="/dsf/chapters/13/2/Bootstrap"
                 >
                   
                     13.2
@@ -1859,7 +1859,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/13/3/Confidence_Intervals"
+                  href="/dsf/chapters/13/3/Confidence_Intervals"
                 >
                   
                     13.3
@@ -1878,7 +1878,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/13/4/Using_Confidence_Intervals"
+                  href="/dsf/chapters/13/4/Using_Confidence_Intervals"
                 >
                   
                     13.4
@@ -1906,7 +1906,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/14/Why_the_Mean_Matters"
+          href="/dsf/chapters/14/Why_the_Mean_Matters"
         >
           
             14.
@@ -1930,7 +1930,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/14/1/Properties_of_the_Mean"
+                  href="/dsf/chapters/14/1/Properties_of_the_Mean"
                 >
                   
                     14.1
@@ -1949,7 +1949,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/14/2/Variability"
+                  href="/dsf/chapters/14/2/Variability"
                 >
                   
                     14.2
@@ -1968,7 +1968,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/14/3/SD_and_the_Normal_Curve"
+                  href="/dsf/chapters/14/3/SD_and_the_Normal_Curve"
                 >
                   
                     14.3
@@ -1987,7 +1987,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/14/4/Central_Limit_Theorem"
+                  href="/dsf/chapters/14/4/Central_Limit_Theorem"
                 >
                   
                     14.4
@@ -2006,7 +2006,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/14/5/Variability_of_the_Sample_Mean"
+                  href="/dsf/chapters/14/5/Variability_of_the_Sample_Mean"
                 >
                   
                     14.5
@@ -2025,7 +2025,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/14/6/Choosing_a_Sample_Size"
+                  href="/dsf/chapters/14/6/Choosing_a_Sample_Size"
                 >
                   
                     14.6
@@ -2053,7 +2053,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/15/Prediction"
+          href="/dsf/chapters/15/Prediction"
         >
           
             15.
@@ -2077,7 +2077,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/15/1/Correlation"
+                  href="/dsf/chapters/15/1/Correlation"
                 >
                   
                     15.1
@@ -2096,7 +2096,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/15/2/Regression_Line"
+                  href="/dsf/chapters/15/2/Regression_Line"
                 >
                   
                     15.2
@@ -2115,7 +2115,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/15/3/Method_of_Least_Squares"
+                  href="/dsf/chapters/15/3/Method_of_Least_Squares"
                 >
                   
                     15.3
@@ -2134,7 +2134,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/15/4/Least_Squares_Regression"
+                  href="/dsf/chapters/15/4/Least_Squares_Regression"
                 >
                   
                     15.4
@@ -2153,7 +2153,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/15/5/Visual_Diagnostics"
+                  href="/dsf/chapters/15/5/Visual_Diagnostics"
                 >
                   
                     15.5
@@ -2172,7 +2172,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/15/6/Numerical_Diagnostics"
+                  href="/dsf/chapters/15/6/Numerical_Diagnostics"
                 >
                   
                     15.6
@@ -2200,7 +2200,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/16/Inference_for_Regression"
+          href="/dsf/chapters/16/Inference_for_Regression"
         >
           
             16.
@@ -2224,7 +2224,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/16/1/Regression_Model"
+                  href="/dsf/chapters/16/1/Regression_Model"
                 >
                   
                     16.1
@@ -2243,7 +2243,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/16/2/Inference_for_the_True_Slope"
+                  href="/dsf/chapters/16/2/Inference_for_the_True_Slope"
                 >
                   
                     16.2
@@ -2262,7 +2262,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/16/3/Prediction_Intervals"
+                  href="/dsf/chapters/16/3/Prediction_Intervals"
                 >
                   
                     16.3
@@ -2290,7 +2290,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/17/Classification"
+          href="/dsf/chapters/17/Classification"
         >
           
             17.
@@ -2314,7 +2314,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/17/1/Nearest_Neighbors"
+                  href="/dsf/chapters/17/1/Nearest_Neighbors"
                 >
                   
                     17.1
@@ -2333,7 +2333,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/17/2/Training_and_Testing"
+                  href="/dsf/chapters/17/2/Training_and_Testing"
                 >
                   
                     17.2
@@ -2352,7 +2352,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/17/3/Rows_of_Tables"
+                  href="/dsf/chapters/17/3/Rows_of_Tables"
                 >
                   
                     17.3
@@ -2371,7 +2371,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/17/4/Implementing_the_Classifier"
+                  href="/dsf/chapters/17/4/Implementing_the_Classifier"
                 >
                   
                     17.4
@@ -2390,7 +2390,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/17/5/Accuracy_of_the_Classifier"
+                  href="/dsf/chapters/17/5/Accuracy_of_the_Classifier"
                 >
                   
                     17.5
@@ -2409,7 +2409,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/17/6/Multiple_Regression"
+                  href="/dsf/chapters/17/6/Multiple_Regression"
                 >
                   
                     17.6
@@ -2437,7 +2437,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
-          href="/chapters/18/Updating_Predictions"
+          href="/dsf/chapters/18/Updating_Predictions"
         >
           
             18.
@@ -2461,7 +2461,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/18/1/More_Likely_than_Not_Binary_Classifier"
+                  href="/dsf/chapters/18/1/More_Likely_than_Not_Binary_Classifier"
                 >
                   
                     18.1
@@ -2480,7 +2480,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
               <li class="c-sidebar__section">
                 <a class="c-sidebar__entry "
-                  href="/chapters/18/2/Making_Decisions"
+                  href="/dsf/chapters/18/2/Making_Decisions"
                 >
                   
                     18.2
@@ -2564,7 +2564,7 @@ document.addEventListener('turbolinks:load', updateInteractLink)
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/chapters/01/what-is-data-science">
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/dsf/chapters/01/what-is-data-science">
       Data Science <span class="u-margin-right-tiny"></span> 〉
     </a>
   
