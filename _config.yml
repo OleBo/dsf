@@ -77,7 +77,7 @@ scholar:
 
 content_folder_name       : "/content"  # The folder where your raw content (notebooks/markdown files) are located
 images_url                : "/dsf/assets/images" # Path to static image files
-css_url                   : "/dsf/assets/css" # Path to static CSS files
+css_url                   : "/assets/css" # Path to static CSS files
 js_url                    : "/dsf/assets/js" # Path to JS files
 custom_static_url         : "/dsf/assets/custom" # Path to user's custom CSS/JS files
 
