@@ -22,7 +22,7 @@ email: ""
 description: ""
 
 baseurl: "" # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
-url: "https://www.inferentialthinking.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://olebo.github.io/dsf" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 #######################################################################################
