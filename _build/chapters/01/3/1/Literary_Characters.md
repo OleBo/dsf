@@ -61,7 +61,7 @@ You can see that Jim is a central character by the large number of times his nam
 ```python
 # The chapters of Little Women, in a table
 
-Table().with_column('Chapters', little_women_chapters)
+Table().with_column('Little Women', little_women_chapters)
 ```
 
 
@@ -72,7 +72,7 @@ Table().with_column('Chapters', little_women_chapters)
 <table border="1" class="dataframe">
     <thead>
         <tr>
-            <th>Chapters</th>
+            <th>Little Women</th>
         </tr>
     </thead>
     <tbody>

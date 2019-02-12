@@ -46,8 +46,7 @@ While a computer cannot understand the text of a book, it can provide us with so
 {:.input_area}
 ```python
 # Display the chapters of Huckleberry Finn in a table.
-
-Table().with_column('Chapters', huck_finn_chapters)
+Table().with_column('Huckleberry Finn', huck_finn_chapters)
 ```
 
 
@@ -58,7 +57,7 @@ Table().with_column('Chapters', huck_finn_chapters)
 <table border="1" class="dataframe">
     <thead>
         <tr>
-            <th>Chapters</th>
+            <th>Huckleberry Finn</th>
         </tr>
     </thead>
     <tbody>

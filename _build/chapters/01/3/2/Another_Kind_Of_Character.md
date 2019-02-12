@@ -174,6 +174,8 @@ plots.scatter(chars_periods_huck_finn.column(1),
 plots.scatter(chars_periods_little_women.column(1), 
               chars_periods_little_women.column(0), 
               color='gold')
+plots.title('140-character sentense (limit of Twitter)')
+plots.legend(['Huckleberry Finn','Little Women'])
 plots.xlabel('Number of periods in chapter')
 plots.ylabel('Number of characters in chapter');
 ```
