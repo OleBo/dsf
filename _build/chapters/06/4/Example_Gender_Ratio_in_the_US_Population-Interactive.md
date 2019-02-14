@@ -528,3 +528,36 @@ interact(ratios_plot, year=list(us_pop.labels[2:]));
 interactive(children=(Dropdown(description='year', index=4, options=('2010', '2011', '2012', '2013', '2014', '…
 ```
 
+
+
+
+{:.input_area}
+```python
+import nbinteract as nbi
+def normal(mean, sd):
+    '''Returns 1000 points drawn at random fron N(mean, sd)'''
+    return np.random.normal(mean, sd, 1000)
+# Pass in the `normal` function and let user change mean and sd.
+# Whenever the user interacts with the sliders, the `normal` function
+# is called and the returned data are plotted.
+nbi.hist(normal, mean=(0, 10), sd=(0.1, 2.0))
+
+# Clicking the Show widget button below loads all widgets on the page.
+# Widgets will automatically load for all subsequent pages until you close
+# the tab/window.
+```
+
+
+
+{:.output .output_data_text}
+```
+interactive(children=(IntSlider(value=5, description='mean', max=10), FloatSlider(value=1.05, description='sd'…
+```
+
+
+
+{:.output .output_data_text}
+```
+Figure(axes=[Axis(label='X', scale=LinearScale()), Axis(label='Y', orientation='vertical', scale=LinearScale()…
+```
+
