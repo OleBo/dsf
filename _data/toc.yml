@@ -101,6 +101,8 @@
     url: /chapters/06/3/Example_Trends_in_the_Population_of_the_United_States
   - title: 'Example: Trends in Gender'
     url: /chapters/06/4/Example_Gender_Ratio_in_the_US_Population
+  - title: 'Interactive Example: Trends in Gender'
+    url: /chapters/06/4/Example_Gender_Ratio_in_the_US_Population-Interactive
 
 - title: Visualization
   url: /chapters/07/Visualization
