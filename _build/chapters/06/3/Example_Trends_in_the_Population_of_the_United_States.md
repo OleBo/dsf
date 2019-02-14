@@ -27,7 +27,7 @@ We are now ready to work with large tables of data. The file below contains "Ann
 data = 'http://www2.census.gov/programs-surveys/popest/datasets/2010-2015/national/asrh/nc-est2015-agesex-res.csv'
 
 # A local copy can be accessed here in case census.gov moves the file:
-# data = path_data + 'nc-est2015-agesex-res.csv'
+data = path_data + 'nc-est2015-agesex-res.csv'
 
 full_census_table = Table.read_table(data)
 full_census_table

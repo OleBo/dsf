@@ -1,14 +1,14 @@
 ---
 redirect_from:
-  - "/chapters/06/4/example-gender-ratio-in-the-us-population"
-interact_link: content/chapters/06/4/Example_Gender_Ratio_in_the_US_Population.ipynb
-title: 'Example: Trends in Gender'
+  - "/chapters/06/4/example-gender-ratio-in-the-us-population-interactive"
+interact_link: content/chapters/06/4/Example_Gender_Ratio_in_the_US_Population-Interactive.ipynb
+title: 'Interactive Example: Trends in Gender'
 prev_page:
-  url: /chapters/06/3/Example_Trends_in_the_Population_of_the_United_States
-  title: 'Example: Population Trends'
+  url: /chapters/06/4/Example_Gender_Ratio_in_the_US_Population
+  title: 'Example: Trends in Gender'
 next_page:
-  url: /chapters/06/4/Example_Gender_Ratio_in_the_US_Population-Interactive
-  title: 'Interactive Example: Trends in Gender'
+  url: /chapters/07/Visualization
+  title: 'Visualization'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
@@ -20,7 +20,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 # Example: Trends in Gender
 
-We are now equipped with enough coding skills to examine features and trends in subgroups of the U.S. population. In this example, we will look at the distribution of males and females across age groups. We will continue using the `us_pop` table from the previous section.
+We are now equipped with enough coding skills to examine features and trends in subgroups of the U.S. population. In this example, we will look at the distribution of males and females across age groups. We will continue using the `us_pop` table from the previous section, but with all years.
 
 
 
@@ -37,39 +37,39 @@ us_pop
 <table border="1" class="dataframe">
     <thead>
         <tr>
-            <th>SEX</th> <th>AGE</th> <th>2010</th> <th>2014</th>
+            <th>SEX</th> <th>AGE</th> <th>2010</th> <th>2011</th> <th>2012</th> <th>2013</th> <th>2014</th> <th>2015</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>0   </td> <td>0   </td> <td>3951330</td> <td>3949775</td>
+            <td>0   </td> <td>0   </td> <td>3951330</td> <td>3963087</td> <td>3926540</td> <td>3931141</td> <td>3949775</td> <td>3978038</td>
         </tr>
         <tr>
-            <td>0   </td> <td>1   </td> <td>3957888</td> <td>3949776</td>
+            <td>0   </td> <td>1   </td> <td>3957888</td> <td>3966551</td> <td>3977939</td> <td>3942872</td> <td>3949776</td> <td>3968564</td>
         </tr>
         <tr>
-            <td>0   </td> <td>2   </td> <td>4090862</td> <td>3959664</td>
+            <td>0   </td> <td>2   </td> <td>4090862</td> <td>3971565</td> <td>3980095</td> <td>3992720</td> <td>3959664</td> <td>3966583</td>
         </tr>
         <tr>
-            <td>0   </td> <td>3   </td> <td>4111920</td> <td>4007079</td>
+            <td>0   </td> <td>3   </td> <td>4111920</td> <td>4102470</td> <td>3983157</td> <td>3992734</td> <td>4007079</td> <td>3974061</td>
         </tr>
         <tr>
-            <td>0   </td> <td>4   </td> <td>4077551</td> <td>4005716</td>
+            <td>0   </td> <td>4   </td> <td>4077551</td> <td>4122294</td> <td>4112849</td> <td>3994449</td> <td>4005716</td> <td>4020035</td>
         </tr>
         <tr>
-            <td>0   </td> <td>5   </td> <td>4064653</td> <td>4006900</td>
+            <td>0   </td> <td>5   </td> <td>4064653</td> <td>4087709</td> <td>4132242</td> <td>4123626</td> <td>4006900</td> <td>4018158</td>
         </tr>
         <tr>
-            <td>0   </td> <td>6   </td> <td>4073013</td> <td>4135930</td>
+            <td>0   </td> <td>6   </td> <td>4073013</td> <td>4074993</td> <td>4097605</td> <td>4142916</td> <td>4135930</td> <td>4019207</td>
         </tr>
         <tr>
-            <td>0   </td> <td>7   </td> <td>4043046</td> <td>4155326</td>
+            <td>0   </td> <td>7   </td> <td>4043046</td> <td>4083225</td> <td>4084913</td> <td>4108349</td> <td>4155326</td> <td>4148360</td>
         </tr>
         <tr>
-            <td>0   </td> <td>8   </td> <td>4025604</td> <td>4120903</td>
+            <td>0   </td> <td>8   </td> <td>4025604</td> <td>4053203</td> <td>4093177</td> <td>4095711</td> <td>4120903</td> <td>4167887</td>
         </tr>
         <tr>
-            <td>0   </td> <td>9   </td> <td>4125415</td> <td>4108349</td>
+            <td>0   </td> <td>9   </td> <td>4125415</td> <td>4035710</td> <td>4063152</td> <td>4104072</td> <td>4108349</td> <td>4133564</td>
         </tr>
     </tbody>
 </table>
@@ -100,21 +100,21 @@ us_pop.where('SEX', are.equal_to(0)).where('AGE', are.between(97, 101))
 <table border="1" class="dataframe">
     <thead>
         <tr>
-            <th>SEX</th> <th>AGE</th> <th>2010</th> <th>2014</th>
+            <th>SEX</th> <th>AGE</th> <th>2010</th> <th>2011</th> <th>2012</th> <th>2013</th> <th>2014</th> <th>2015</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>0   </td> <td>97  </td> <td>68893</td> <td>83089</td>
+            <td>0   </td> <td>97  </td> <td>68893</td> <td>73274</td> <td>77156</td> <td>79953</td> <td>83089</td> <td>92377</td>
         </tr>
         <tr>
-            <td>0   </td> <td>98  </td> <td>47037</td> <td>59726</td>
+            <td>0   </td> <td>98  </td> <td>47037</td> <td>50670</td> <td>54509</td> <td>57015</td> <td>59726</td> <td>61991</td>
         </tr>
         <tr>
-            <td>0   </td> <td>99  </td> <td>32178</td> <td>41468</td>
+            <td>0   </td> <td>99  </td> <td>32178</td> <td>33636</td> <td>36779</td> <td>39271</td> <td>41468</td> <td>43641</td>
         </tr>
         <tr>
-            <td>0   </td> <td>100 </td> <td>54410</td> <td>71626</td>
+            <td>0   </td> <td>100 </td> <td>54410</td> <td>57702</td> <td>61821</td> <td>66189</td> <td>71626</td> <td>76974</td>
         </tr>
     </tbody>
 </table>
@@ -129,42 +129,24 @@ It does come as a surprise, though, that the numbers for `AGE` 100 are quite a b
 The row with `AGE` 100 doesn't just represent 100-year-olds – it also includes those who are older than 100. That is why the numbers in that row are larger than in the row for the 99-year-olds.
 
 ### Overall Proportions of Males and Females
-We will now begin looking at gender ratios in 2014. First, let's look at all the age groups together. Remember that this means looking at the rows where the "age" is coded 999. The table `all_ages` contains this information. There are three rows: one for the total of both genders, one for males (`SEX` code 1), and one for females (`SEX` code 2).
+We will now begin looking at gender ratios in any year (you can select the year e.g. 2014). First, let's look at all the age groups together. Remember that this means looking at the rows where the "age" is coded 999. The function `all_ages` returns a table containing this information. There are three rows: one for the total of both genders, one for males (`SEX` code 1), and one for females (`SEX` code 2).
 
 
 
 {:.input_area}
 ```python
-us_pop_2014 = us_pop.drop('2010')
-all_ages = us_pop_2014.where('AGE', are.equal_to(999))
-all_ages
+def all_ages(year="2014"):
+    us_pop_year = us_pop.select(list(us_pop.labels[:2])+[year])
+    return us_pop_year.where('AGE', are.equal_to(999))
+interact(all_ages, year=list(us_pop.labels[2:]));
 ```
 
 
 
-
-
-<div markdown="0" class="output output_html">
-<table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>SEX</th> <th>AGE</th> <th>2014</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>0   </td> <td>999 </td> <td>318907401</td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>999 </td> <td>156955337</td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>999 </td> <td>161952064</td>
-        </tr>
-    </tbody>
-</table>
-</div>
-
+{:.output .output_data_text}
+```
+interactive(children=(Dropdown(description='year', index=4, options=('2010', '2011', '2012', '2013', '2014', '…
+```
 
 
 Row 0 of `all_ages` contains the total U.S. population in each of the two years. The United States had just under 319 million in 2014.
@@ -173,43 +155,24 @@ Row 1 contains the counts for males and Row 2 for females. Compare these two row
 
 The population counts in Row 1 and Row 2 add up to the total population in Row 0. 
 
-For comparability with other quantities, we will need to convert these counts to percents out of the total population. Let's access the total for 2014 and name it. Then, we'll show a population table with a proportion column. Consistent with our earlier observation that there were more females than males, about 50.8% of the population in 2014 was female and about 49.2% male in each of the two years. 
+For comparability with other quantities, we will need to convert these counts to percents out of the total population. Let's access the total for a particular year and name it `pop_base`. Then, we'll show a population table with a proportion column. Consistent with our earlier observation that there were more females than males, about 50.8% of the population in 2014 was female and about 49.2% male in each of the two years. 
 
 
 
 {:.input_area}
 ```python
-pop_2014 = all_ages.column('2014').item(0)
-all_ages.with_column(
-    'Proportion', all_ages.column('2014')/pop_2014
-).set_format('Proportion', PercentFormatter)
+def all_ages_proportion(year="2014"):
+    pop_base = all_ages(year).column(year).item(0)
+    return all_ages(year).with_column('Proportion', all_ages(year).column((year))/pop_base).set_format('Proportion', PercentFormatter)
+interact(all_ages_proportion, year=list(us_pop.labels[2:]));
 ```
 
 
 
-
-
-<div markdown="0" class="output output_html">
-<table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>SEX</th> <th>AGE</th> <th>2014</th> <th>Proportion</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>0   </td> <td>999 </td> <td>318907401</td> <td>100.00%   </td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>999 </td> <td>156955337</td> <td>49.22%    </td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>999 </td> <td>161952064</td> <td>50.78%    </td>
-        </tr>
-    </tbody>
-</table>
-</div>
-
+{:.output .output_data_text}
+```
+interactive(children=(Dropdown(description='year', index=4, options=('2010', '2011', '2012', '2013', '2014', '…
+```
 
 
 ### Proportions of Boys and Girls among Infants
@@ -220,35 +183,18 @@ When we look at infants, however, the opposite is true. Let's define infants to 
 
 {:.input_area}
 ```python
-infants = us_pop_2014.where('AGE', are.equal_to(0))
-infants
+def infants(year="2014"):
+    us_pop_year = us_pop.select(list(us_pop.labels[:2])+[year])
+    return us_pop_year.where('AGE', are.equal_to(0))
+interact(infants, year=list(us_pop.labels[2:]));
 ```
 
 
 
-
-
-<div markdown="0" class="output output_html">
-<table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>SEX</th> <th>AGE</th> <th>2014</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>0   </td> <td>0   </td> <td>3949775</td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>0   </td> <td>2020326</td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>0   </td> <td>1929449</td>
-        </tr>
-    </tbody>
-</table>
-</div>
-
+{:.output .output_data_text}
+```
+interactive(children=(Dropdown(description='year', index=4, options=('2010', '2011', '2012', '2013', '2014', '…
+```
 
 
 As before, we can convert these counts to percents out of the total numbers of infants. The resulting table shows that in 2014, just over 51% of infants in the U.S. were male. 
@@ -257,37 +203,18 @@ As before, we can convert these counts to percents out of the total numbers of i
 
 {:.input_area}
 ```python
-infants_2014 = infants.column('2014').item(0)
-infants.with_column(
-    'Proportion', infants.column('2014')/infants_2014
-).set_format('Proportion', PercentFormatter)
+def infants_proportion(year="2014"):
+    infants_year = infants(year).column(year).item(0)
+    return infants(year).with_column('Proportion', infants(year).column(year)/infants_year).set_format('Proportion', PercentFormatter)
+interact(infants_proportion, year=list(us_pop.labels[2:]));
 ```
 
 
 
-
-
-<div markdown="0" class="output output_html">
-<table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>SEX</th> <th>AGE</th> <th>2014</th> <th>Proportion</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>0   </td> <td>0   </td> <td>3949775</td> <td>100.00%   </td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>0   </td> <td>2020326</td> <td>51.15%    </td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>0   </td> <td>1929449</td> <td>48.85%    </td>
-        </tr>
-    </tbody>
-</table>
-</div>
-
+{:.output .output_data_text}
+```
+interactive(children=(Dropdown(description='year', index=4, options=('2010', '2011', '2012', '2013', '2014', '…
+```
 
 
 In fact, it has long been observed that the proportion of boys among newborns is slightly more than 1/2. The reason for this is not thoroughly understood, and [scientists are still working on it](http://www.npr.org/sections/health-shots/2015/03/30/396384911/why-are-more-baby-boys-born-than-girls).
@@ -304,116 +231,36 @@ The tables `females` and `males` contain the data for each the two genders.
 
 {:.input_area}
 ```python
-females_all_rows = us_pop_2014.where('SEX', are.equal_to(2))
-females = females_all_rows.where('AGE', are.not_equal_to(999))
-females
+def females(year="2014"):
+    us_pop_year = us_pop.select(list(us_pop.labels[:2])+[year])
+    return us_pop_year.where('SEX', are.equal_to(2)).where('AGE', are.not_equal_to(999))
+interact(females, year=list(us_pop.labels[2:]));
 ```
 
 
 
-
-
-<div markdown="0" class="output output_html">
-<table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>SEX</th> <th>AGE</th> <th>2014</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>2   </td> <td>0   </td> <td>1929449</td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>1   </td> <td>1931375</td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>2   </td> <td>1935991</td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>3   </td> <td>1957483</td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>4   </td> <td>1961199</td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>5   </td> <td>1962561</td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>6   </td> <td>2024870</td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>7   </td> <td>2032494</td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>8   </td> <td>2015285</td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>9   </td> <td>2010659</td>
-        </tr>
-    </tbody>
-</table>
-<p>... (91 rows omitted)</p>
-</div>
-
+{:.output .output_data_text}
+```
+interactive(children=(Dropdown(description='year', index=4, options=('2010', '2011', '2012', '2013', '2014', '…
+```
 
 
 
 
 {:.input_area}
 ```python
-males_all_rows = us_pop_2014.where('SEX', are.equal_to(1))
-males = males_all_rows.where('AGE', are.not_equal_to(999))
-males
+def males(year="2014"):
+    us_pop_year = us_pop.select(list(us_pop.labels[:2])+[year])
+    return us_pop_year.where('SEX', are.equal_to(1)).where('AGE', are.not_equal_to(999))
+interact(males, year=list(us_pop.labels[2:]));
 ```
 
 
 
-
-
-<div markdown="0" class="output output_html">
-<table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>SEX</th> <th>AGE</th> <th>2014</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1   </td> <td>0   </td> <td>2020326</td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>1   </td> <td>2018401</td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>2   </td> <td>2023673</td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>3   </td> <td>2049596</td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>4   </td> <td>2044517</td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>5   </td> <td>2044339</td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>6   </td> <td>2111060</td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>7   </td> <td>2122832</td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>8   </td> <td>2105618</td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>9   </td> <td>2097690</td>
-        </tr>
-    </tbody>
-</table>
-<p>... (91 rows omitted)</p>
-</div>
-
+{:.output .output_data_text}
+```
+interactive(children=(Dropdown(description='year', index=4, options=('2010', '2011', '2012', '2013', '2014', '…
+```
 
 
 The plan now is to compare the number of women and the number of men at each age, for each of the two years. Array and Table methods give us straightforward ways to do this. Both of these tables have one row for each age.
@@ -422,7 +269,7 @@ The plan now is to compare the number of women and the number of men at each age
 
 {:.input_area}
 ```python
-males.column('AGE')
+males('2014').column('AGE')
 ```
 
 
@@ -447,7 +294,7 @@ array([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,
 
 {:.input_area}
 ```python
-females.column('AGE')
+females('2014').column('AGE')
 ```
 
 
@@ -474,60 +321,17 @@ For any given age, we can get the Female:Male gender ratio by dividing the numbe
 
 {:.input_area}
 ```python
-ratios = Table().with_columns(
-    'AGE', females.column('AGE'),
-    '2014 F:M RATIO', females.column('2014')/males.column('2014')
-)
-ratios
+def ratios(year="2014"):
+    return Table().with_columns('AGE', females(year).column('AGE'),year+' F:M RATIO', females(year).column(year)/males(year).column(year))
+interact(ratios, year=list(us_pop.labels[2:]));
 ```
 
 
 
-
-
-<div markdown="0" class="output output_html">
-<table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>AGE</th> <th>2014 F:M RATIO</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>0   </td> <td>0.955019      </td>
-        </tr>
-        <tr>
-            <td>1   </td> <td>0.956884      </td>
-        </tr>
-        <tr>
-            <td>2   </td> <td>0.956672      </td>
-        </tr>
-        <tr>
-            <td>3   </td> <td>0.955058      </td>
-        </tr>
-        <tr>
-            <td>4   </td> <td>0.959248      </td>
-        </tr>
-        <tr>
-            <td>5   </td> <td>0.959998      </td>
-        </tr>
-        <tr>
-            <td>6   </td> <td>0.959172      </td>
-        </tr>
-        <tr>
-            <td>7   </td> <td>0.957445      </td>
-        </tr>
-        <tr>
-            <td>8   </td> <td>0.957099      </td>
-        </tr>
-        <tr>
-            <td>9   </td> <td>0.958511      </td>
-        </tr>
-    </tbody>
-</table>
-<p>... (91 rows omitted)</p>
-</div>
-
+{:.output .output_data_text}
+```
+interactive(children=(Dropdown(description='year', index=4, options=('2010', '2011', '2012', '2013', '2014', '…
+```
 
 
 You can see from the display that the ratios are all around 0.96 for children aged nine or younger. When the Female:Male ratio is less than 1, there are fewer females than males. Thus what we are seeing is that there were fewer girls than boys in each of the age groups 0, 1, 2, and so on through 9. Moreover, in each of these age groups, there were about 96 girls for every 100 boys.
@@ -540,7 +344,7 @@ Something extraordinary happens when we examine the other end of the age range. 
 
 {:.input_area}
 ```python
-ratios.where('AGE', are.above(75)).show()
+ratios("2014").where('AGE', are.above(75)).show()
 ```
 
 
@@ -644,7 +448,7 @@ If you are wondering how many people there were at these advanced ages, you can 
 
 {:.input_area}
 ```python
-males.where('AGE', are.between(98, 100))
+males("2014").where('AGE', are.between(98, 100))
 ```
 
 
@@ -675,7 +479,7 @@ males.where('AGE', are.between(98, 100))
 
 {:.input_area}
 ```python
-females.where('AGE', are.between(98, 100))
+females("2014").where('AGE', are.between(98, 100))
 ```
 
 
@@ -712,12 +516,15 @@ That females outnumber males in the U.S. is partly due to the marked gender imba
 
 {:.input_area}
 ```python
-ratios.plot('AGE')
+def ratios_plot(year="2014"):
+    return ratios(year).plot('AGE')
+interact(ratios_plot, year=list(us_pop.labels[2:]));
 ```
 
 
 
-{:.output .output_png}
-![png](../../../images/chapters/06/4/Example_Gender_Ratio_in_the_US_Population_34_0.png)
-
+{:.output .output_data_text}
+```
+interactive(children=(Dropdown(description='year', index=4, options=('2010', '2011', '2012', '2013', '2014', '…
+```
 
